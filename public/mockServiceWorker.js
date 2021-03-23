@@ -136,7 +136,7 @@ async function handleRequest(event, requestId) {
 }
 
 async function getResponse(event, client, requestId) {
-  const { request } = event
+  const {request} = event
   const requestClone = request.clone()
   const getOriginalResponse = () => fetch(requestClone)
 
@@ -205,7 +205,7 @@ async function getResponse(event, client, requestId) {
     }
 
     case 'NETWORK_ERROR': {
-      const { name, message } = clientMessage.payload
+      const {name, message} = clientMessage.payload
       const networkError = new Error(message)
       networkError.name = name
 
@@ -238,7 +238,7 @@ If you wish to mock an error response, please refer to this guide: https://mswjs
 }
 
 self.addEventListener('fetch', function (event) {
-  const { request } = event
+  const {request} = event
 
   // Bypass navigation requests.
   if (request.mode === 'navigate') {

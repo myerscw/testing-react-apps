@@ -54,7 +54,7 @@ function useFormSubmission({endpoint, data}) {
             'content-type': 'application/json',
           },
         })
-        .then(async response => {
+        .then(async (response) => {
           const data = await response.json()
           if (response.ok) {
             dispatch({type: 'RESOLVE', responseData: data})
@@ -82,7 +82,7 @@ function LoginSubmission() {
           Welcome <strong>{responseData.username}</strong>
         </div>
       ) : (
-        <Login onSubmit={data => setFormData(data)} />
+        <Login onSubmit={(data) => setFormData(data)} />
       )}
       <div style={{height: 200}}>
         {status === 'pending' ? <Spinner /> : null}

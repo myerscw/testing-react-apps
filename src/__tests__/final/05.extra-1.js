@@ -12,8 +12,8 @@ import Login from '../../components/login-submission'
 
 const buildLoginForm = build({
   fields: {
-    username: fake(f => f.internet.userName()),
-    password: fake(f => f.internet.password()),
+    username: fake((f) => f.internet.userName()),
+    password: fake((f) => f.internet.password()),
   },
 })
 

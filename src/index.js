@@ -23,7 +23,7 @@ function DefaultComponent() {
       <div>Please go to the URL for one of the examples:</div>
       <div>
         <ul>
-          {Object.keys(lazyComponents).map(key => (
+          {Object.keys(lazyComponents).map((key) => (
             <li key={key}>
               <a href={key}>{key}</a>
             </li>
